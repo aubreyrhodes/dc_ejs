@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <% include header.ejs %>
+    <h1><%= name %> says <%= content %></h1>
+    <% for(i = 0; i < showHello; i++) { %>
+      <p>Hello</p>
+    <% } %>
+  </body>
+</html>
