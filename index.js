@@ -1,10 +1,12 @@
 var express = require('express');
 var ejs = require('ejs');
+var path = require('path');
 var app = express();
+var dogData = require('./app/data/animals.json');
 
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
-
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/', (req,res,next)=>{
     res.json('Hello World');
@@ -21,11 +23,14 @@ app.get('/cats/:name', (req,res,next)=>{
 });
 
 app.get('/dogs', (req, res, next) => {
-  res.render('first', {
-    content: 'ruff',
-    showHello: 0,
-    name: 'Ernest'
-  });
+  var dogNum = Number(req.query.num) - 1;
+  var dog = dogData[dogNum];
+
+  res.render('pets', {
+    name: dog["name"],
+    description: dog["description"],
+    imgURL: dog["imgURL"]
+  })
 });
 
 app.get('/cats_and_dogs', (req,res,next) => {

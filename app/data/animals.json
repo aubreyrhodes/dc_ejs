@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Three good boys",
+        "description": "All these pups are good",
+        "imgURL": "images/pups1.jpg"
+    },
+    {
+        "name": "Five little cuties",
+        "description": "They know how to party",
+        "imgURL": "images/pups2.jpg"
+    },
+    {
+        "name": "Sleepy Pupper",
+        "description": "She's too sleepy",
+        "imgURL": "images/pups3.jpg"
+    },
+    {
+        "name": "Basket Dogs",
+        "description": "They are kind of grumps",
+        "imgURL": "images/pups4.jpg"
+    },
+    {
+        "name": "Running Pups",
+        "description": "He stole something",
+        "imgURL": "images/pups5.jpg"
+    }
+]
